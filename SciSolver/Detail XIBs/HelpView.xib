@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="1367"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="1367"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <attributedString key="attributedText">
+                        <fragment>
+                            <string key="content">                                                          This application is meant for users currently enrolled in a high school chemistry or physics course. It is meant to help users understand the numerous equations they are learning.
+
+The main menu has 4 buttons, "Chemistry", "Physics", "Search", and "Help". 
+
+"Chemistry" - This takes the user to a list of chemistry topics the user can select and use.
+
+"Physics" - This takes the user to a list of physics topics the user can select and use.
+
+"Search" - This takes the user to a full list of the equations in this application, with a search bar. When the user types in a letter or letters into the search bar, the list automatically updates to show which topics contain the type expression in the beginning of any of the words in the topic's title. Pressing the "Cancel" button dismisses the keyboard.
+
+The "Help" button brings you a here, a piece of text intended to help students use this application
+
+When the user selects a topic, either a list of relevant equations will pop from which the user can select one, or the user will be brought to an input screen for the main equation of the topic. The user can choose which variable to solve for, at which point the chosen variable's field will disappear and stop being editable. The other fields must be filled in order to solve for the chosen variable, otherwise an error message is displayed. Alongside each input field is a unit picker, capable of switching the units the user would like to operate with, swiping from right to left will page to the help screen, which displays all equations relevant to the chosen topic an image and a short description of the equation(s). Below these are the definitions of each variable.  That’s All Folks!</string>
+                            <attributes>
+                                <font key="NSFont" size="18" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="3" firstAttribute="top" secondItem="1" secondAttribute="top" id="4"/>
+                <constraint firstItem="3" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="5"/>
+                <constraint firstItem="3" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="6"/>
+                <constraint firstItem="3" firstAttribute="bottom" secondItem="1" secondAttribute="bottom" id="15"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

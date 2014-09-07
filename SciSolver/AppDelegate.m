@@ -7,13 +7,21 @@
 //
 
 #import "AppDelegate.h"
+#import "MainMenu.h"
+#import "EquationStore.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [EquationStore sharedStore];
+    [EquationStore equationDictionary];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+    NSLog(@"%d", [[UIApplication sharedApplication] isStatusBarHidden]);
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[MainMenu alloc] init]];
+    self.window.rootViewController = nav;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
